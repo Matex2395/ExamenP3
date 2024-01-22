@@ -24,7 +24,7 @@ namespace ProductoAppMAUI.Service
 
 
 
-        public async Task<Tarea> PostResena(Tarea tarea)
+        public async Task<Tarea> PostTarea(Tarea tarea)
         {
             var content = new StringContent(JsonConvert.SerializeObject(tarea), Encoding.UTF8, "application/json");
             var response = await _httpClient.PostAsync("/api/Tarea", content);

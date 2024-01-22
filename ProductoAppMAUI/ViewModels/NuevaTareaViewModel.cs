@@ -21,11 +21,10 @@ namespace ProductoAppMAUI.ViewModels
 
 
 
-        public NuevaTareaViewModel(Tarea tarea)
+        public NuevaTareaViewModel()
         {
 
             _APIService = new APIService();
-            _tarea = tarea;
 
         }
 
@@ -48,7 +47,7 @@ namespace ProductoAppMAUI.ViewModels
                        Actividad = Actividad
                    };
 
-                   await _APIService(resena);
+                   //await _APIService(resena);
                    await App.Current.MainPage.DisplayAlert("Reseña Agregada", "Su reseña se publicó correctamente.", "OK");
                    await App.Current.MainPage.Navigation.PopAsync();
                }

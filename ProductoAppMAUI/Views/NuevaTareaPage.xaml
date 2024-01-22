@@ -7,7 +7,7 @@
         <Label Text="Nombre" />
         <Entry x:Name="nombreEntry" />
         <Label Text="Estado" />
-        <Picker x:Name="estadoPicker">
+        <Picker x:Name="estadoPicker" SelectedIndexChanged="estadoPicker_SelectedIndexChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Por Hacer</x:String>
