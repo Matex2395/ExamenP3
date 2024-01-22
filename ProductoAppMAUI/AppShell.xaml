@@ -5,24 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ProductoAppMAUI"
     Shell.FlyoutBehavior="Disabled">
-    
- 
-        <TabBar>
-        <ShellContent
-            Title="Home"
-            ContentTemplate="{DataTemplate local:HomePage}"
-            Icon="{OnPlatform 'icon_home.png', iOS='icon_home.png', MacCatalyst='icon_home.png'}" />
 
-        <ShellContent
-            Title="Productos"
-            ContentTemplate="{DataTemplate local:ProductoPage}"
-            Icon="{OnPlatform 'icon_clipboard_list.png', iOS='icon_clipboard_list.png', MacCatalyst='icon_clipboard_list.png'}" /> 
-        
-    </TabBar>
-    
-    <ShellContent
+
+
+    <!--<ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:HomePage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:TareasPage}"
+        Route="MainPage" />-->
 
 </Shell>

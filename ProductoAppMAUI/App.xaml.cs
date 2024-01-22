@@ -1,6 +1,7 @@
 using ProductoAppMAUI.Handlers;
 using ProductoAppMAUI.Service;
 using Microsoft.Maui.Graphics;
+using ProductoAppMAUI.Views;
 
 namespace ProductoAppMAUI
 {
@@ -9,7 +10,7 @@ namespace ProductoAppMAUI
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new HomePage());
+            MainPage = new NavigationPage(new TareasPage());
 
             /*MainPage = new AppShell();*/
 

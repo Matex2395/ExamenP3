@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProductoAppMAUI.Views.TareasPage"
-             Title="TareasPage">
+<ContentPage
+    x:Class="ProductoAppMAUI.Views.TareasPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="TareasPage">
     <StackLayout>
         <Entry x:Name="nombreEntry" Placeholder="Nombre" />
         <Picker x:Name="estadoPicker">
@@ -14,8 +15,25 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <Button x:Name="crearTareaButton" Text="Crear Tarea" Clicked="OnCrearTareaClicked" />
-        <Button x:Name="buscarTareaButton" Text="Buscar" Clicked="OnBuscarTareaClicked" />
-        <ListView x:Name="listaTareas" ItemsSource="{Binding Tareas}" />
+        <Button
+            x:Name="crearTareaButton"
+            Clicked="OnCrearTareaClicked"
+            Text="Crear Tarea" />
+        <Button
+            x:Name="buscarTareaButton"
+            Clicked="OnBuscarTareaClicked"
+            Text="Buscar" />
+        <ListView x:Name="listaTareas" ItemsSource="{Binding Tareas}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Actividad}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </StackLayout>
 </ContentPage>

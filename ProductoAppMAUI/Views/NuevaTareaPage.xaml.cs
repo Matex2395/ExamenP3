@@ -1,6 +1,5 @@
 using ProductoAppMAUI.Models;
 using ProductoAppMAUI.Service;
-using ProductoAppMAUI.ViewModels;
 
 namespace ProductoAppMAUI.Views;
 
@@ -9,10 +8,9 @@ public partial class NuevaTareaPage : ContentPage
 
     private string estadoSeleccionado;
     private readonly APIService _APIService;
-    public NuevaTareaPage(Tarea tarea)
+    public NuevaTareaPage()
 	{
 		InitializeComponent();
-        BindingContext = new NuevaTareaViewModel();
     }
 
     private async void OnGuardarClicked(object sender, EventArgs e)
@@ -40,6 +38,11 @@ public partial class NuevaTareaPage : ContentPage
     private void estadoPicker_SelectedIndexChanged(object sender, EventArgs e)
     {
         var picker = (Picker)sender;
-        string estadoSeleccionado = (string)picker.SelectedItem;
+        if (picker.SelectedItem != null)
+        {
+            estadoSeleccionado = (string)picker.SelectedItem;
+        }
     }
+
+
 }
