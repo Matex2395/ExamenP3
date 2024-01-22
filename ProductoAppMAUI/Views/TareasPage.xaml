@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductoAppMAUI.Views.TareasPage"
+             Title="TareasPage">
+    <StackLayout>
+        <Entry x:Name="nombreEntry" Placeholder="Nombre" />
+        <Picker x:Name="estadoPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Por Hacer</x:String>
+                    <x:String>Haciendo</x:String>
+                    <x:String>Hecho</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button x:Name="crearTareaButton" Text="Crear Tarea" Clicked="OnCrearTareaClicked" />
+        <Button x:Name="buscarTareaButton" Text="Buscar" Clicked="OnBuscarTareaClicked" />
+        <ListView x:Name="listaTareas" ItemsSource="{Binding Tareas}" />
+    </StackLayout>
+</ContentPage>
